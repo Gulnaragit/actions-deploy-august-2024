@@ -32,4 +32,4 @@ jobs:
       run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project white-dispatch-447423-v8
 
     - name: Deploy to GKE
-      run: helm install flask ./flask
+      run: helm upgrade --install flask ./flask --set tag=2.0.0
